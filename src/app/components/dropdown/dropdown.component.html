@@ -1,0 +1,5 @@
+<select [(ngModel)]="select1" (change)="onChange()">
+    <option *ngFor="let cover of gameCovers" [value]="cover.id">
+        {{cover.nome}}
+    </option>
+</select>

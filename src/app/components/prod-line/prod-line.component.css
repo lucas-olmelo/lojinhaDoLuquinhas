@@ -1,0 +1,11 @@
+.title {
+    font-size: 25px;
+    color: rgb(0, 0, 185);
+}
+
+.productsLine {
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    margin: 1% auto;
+}
