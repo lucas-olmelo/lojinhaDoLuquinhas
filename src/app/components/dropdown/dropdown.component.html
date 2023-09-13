@@ -1,5 +1,15 @@
-<select [(ngModel)]="select1" (change)="onChange()">
-    <option *ngFor="let cover of gameCovers" [value]="cover.id">
-        {{cover.nome}}
-    </option>
-</select>
+<div class="dropdownContainer">
+    <select [(ngModel)]="select1" (change)="onChange()">
+        <option *ngFor="let cover of gameCovers" [value]="cover.id">
+            {{cover.nome}}
+        </option>
+    </select>
+    
+    <app-game-info *ngIf="gameName != ''" class="gameInfo" [name]="buscaInfo()[0]" [image]="buscaInfo()[2]" [price]="buscaInfo()[1]"></app-game-info>
+    
+    <button class="buttonCart" *ngIf="this.gamePrice > 0" (click)="clickButton()">Adicionar ao Carrinho</button>
+
+</div>
+<div *ngIf="cart.length != 0" class="cartContainer">
+    <app-cart [cartList]="cart"></app-cart>
+</div>

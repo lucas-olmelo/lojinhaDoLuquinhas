@@ -1,0 +1,7 @@
+<div class="cartContainer">
+    <h2 class="title">Carrinho</h2>
+    <div class="cartItems">
+        <app-game-info class="game" *ngFor="let item of cartList" [name]="item.nome" [image]="coverUrl + item.id + coverExtensao" [price]="item.preco"></app-game-info>
+    </div>
+    <button class="buttonBuy">Comprar</button>
+</div>

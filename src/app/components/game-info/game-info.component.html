@@ -1,0 +1,7 @@
+<div class="gameInfo">
+    <img class="gameImage" src="{{image}}" alt="">
+    <div class="infoText">
+        <p class="gameName">{{name}}</p>
+        <p *ngIf="name != ''" class="gamePrice">{{returnPrice()}}</p>
+    </div>
+</div>

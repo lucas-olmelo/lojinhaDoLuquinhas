@@ -10,8 +10,20 @@ export class DropdownComponent {
   select1: any = {};
   pais: any=[]; 
 
+  gameName: string = '';
+  gamePrice: number = 0;
+  gameId: number = 99;
+  coverUrl: string = '../../../assets/images/covers/game_cover_';
+  coverExtensao: string = '.jpg';
 
+  cart: any = [];
+  
   gameCovers = [
+    {
+      id: 99,
+      nome: 'Selecione o jogo que você quer comprar',
+      preco: 0
+    },
     {
       id:0,
       nome:'Gan Ie',
@@ -46,14 +58,21 @@ export class DropdownComponent {
   constructor(){}
 
   ngOnInit() {
-    
+    this.select1 = 99;
+  }
+
+  buscaInfo() {
+    return [this.gameName, this.gamePrice.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}), (this.coverUrl + this.gameId + this.coverExtensao)];
   }
 
   onChange(){
-
+    this.gameName = this.gameCovers.filter((x)=> x.id == this.select1)[0].nome;
+    this.gamePrice = this.gameCovers.filter((x)=> x.id == this.select1)[0].preco;
+    this.gameId = this.gameCovers.filter((x)=> x.id == this.select1)[0].id;
   }
 
   clickButton(){
-    
+    alert(this.gameName + ' adicionado ao carrinho')
+    this.cart.push(this.gameCovers.filter((x)=> x.id == this.select1)[0]);
   }
 }

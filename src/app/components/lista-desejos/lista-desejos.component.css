@@ -1,0 +1,22 @@
+.title {
+    margin-top: 2%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+input {
+    width: 50%;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: 2px rgb(0, 0, 185) solid;
+    margin: 2% auto;
+}
+
+ul {
+    margin-left: 2%;
+}
+
+.desejo {
+    font-size: 25px;
+}

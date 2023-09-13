@@ -7,9 +7,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProdLineComponent } from './components/prod-line/prod-line.component';
-import { CategoryComponent } from './components/category/category.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { GameInfoComponent } from './components/game-info/game-info.component';
+import { CartComponent } from './components/cart/cart.component';
+import { ListaDesejosComponent } from './components/lista-desejos/lista-desejos.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +19,11 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
     HeaderComponent,
     ProductComponent,
     ProdLineComponent,
-    CategoryComponent,
     HomeComponent,
-    DropdownComponent
+    DropdownComponent,
+    GameInfoComponent,
+    CartComponent,
+    ListaDesejosComponent
   ],
   imports: [
     BrowserModule,

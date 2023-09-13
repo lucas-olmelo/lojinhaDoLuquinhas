@@ -1,0 +1,9 @@
+<p class="title">Adicione um item que você deseja comprar em nossa loja:</p>
+<input [(ngModel)]="input" (change)="adicionaNaLista()" type="text" placeholder="Digite o produto que você deseja">
+
+<div class="listaDesejos">
+    <ul>
+        <li class="desejo" *ngFor="let desejo of listaDesejos">{{desejo}}</li>
+    </ul>
+    <p class="title" *ngIf="listaDesejos.length > 0">Buscaremos disponibilizar esses títulos em breve em nossa loja, agradecemos a contribuição</p>
+</div>
