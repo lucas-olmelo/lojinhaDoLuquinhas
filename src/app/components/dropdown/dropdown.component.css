@@ -2,6 +2,12 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 2% auto 5%;
+}
+
+.title {
+    color: rgb(0, 0, 185);
+    margin-top: 2%;
 }
 
 select {
@@ -11,6 +17,7 @@ select {
     font-size: 18px;
     border: 2px rgb(0, 0, 185) solid;
     margin: 2% auto;
+    padding-left: 1%;
 }
 
 .gameInfo {
@@ -29,9 +36,4 @@ select {
 .buttonCart:hover {
     cursor: pointer;
     transform: scale(1.1);
-}
-
-.cartContainer {
-    display: flex;
-    width: 100%;
 }

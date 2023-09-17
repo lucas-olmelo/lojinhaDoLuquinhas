@@ -1,3 +1,9 @@
+.containerLista {
+    border: solid 2px rgb(0, 0, 185);
+    border-radius: 20px;
+    padding: 1% 2%;
+}
+
 .title {
     margin-top: 2%;
     font-size: 25px;
@@ -11,6 +17,7 @@ input {
     font-size: 18px;
     border: 2px rgb(0, 0, 185) solid;
     margin: 2% auto;
+    padding-left: 1%;
 }
 
 ul {
@@ -20,3 +27,19 @@ ul {
 .desejo {
     font-size: 25px;
 }
+
+.buttonList {
+    background-color: rgb(0, 0, 185);
+    color: white;
+    border-radius: 8px;
+    font-size: 18px;
+    padding: .5% 1%;
+    margin: 1% 2%;
+    cursor: pointer;
+}
+
+.buttonList:disabled {
+    background-color: lightgray;
+    cursor: default;
+}
+

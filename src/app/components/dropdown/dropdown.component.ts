@@ -62,13 +62,16 @@ export class DropdownComponent {
   }
 
   buscaInfo() {
-    return [this.gameName, this.gamePrice.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}), (this.coverUrl + this.gameId + this.coverExtensao)];
+    return [this.gameName, String(this.gamePrice), (this.coverUrl + this.gameId + this.coverExtensao)];
   }
 
   onChange(){
     this.gameName = this.gameCovers.filter((x)=> x.id == this.select1)[0].nome;
     this.gamePrice = this.gameCovers.filter((x)=> x.id == this.select1)[0].preco;
     this.gameId = this.gameCovers.filter((x)=> x.id == this.select1)[0].id;
+
+    console.log(this.gamePrice);
+    
   }
 
   clickButton(){

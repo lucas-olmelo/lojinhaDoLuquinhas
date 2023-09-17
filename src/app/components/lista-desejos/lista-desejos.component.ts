@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./lista-desejos.component.css']
 })
 export class ListaDesejosComponent {
-  input: any = {};
+  item: any = {};
   listaDesejos: string[] = [];
 
-  adicionaNaLista() {
-    this.listaDesejos.push(this.input)
+  adicionaNaLista(nome: string) {
+    this.listaDesejos.push(nome);
   }
 }

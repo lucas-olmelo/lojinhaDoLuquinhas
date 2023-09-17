@@ -1,18 +1,18 @@
 .product {
     padding: 20px;
     background-color: lightgray;
-    height: 460px;
-    width: 250px;
+    height: 100%;
+    width: 100%;
     position: relative;
     border-radius: 10px;
 }
 
 .productImage {
-    max-width: 200px;
+    max-width: 100%;
 }
 
 .productName {
-    margin: 5% auto;
+    margin: 5% auto 15%;
 }
 
 .productPrice {

@@ -1,3 +1,10 @@
+.cartContainer {
+    border: solid 2px rgb(0, 0, 185);
+    border-radius: 20px;
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
 .title {
     font-size: 25px;
     color: rgb(0, 0, 185);
@@ -12,13 +19,23 @@
     margin-bottom: 2%;
 }
 
+.buyingContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.valueText {
+    font-size: 18px;
+}
+
 .buttonBuy {
     background-color: rgb(0, 0, 185);
     color: white;
     border-radius: 8px;
     font-size: 18px;
     padding: .8% 5%;
-    margin: 1% auto;
+    margin: 1% 2%;
 }
 
 .buttonBuy:hover {

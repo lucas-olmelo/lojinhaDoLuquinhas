@@ -11,6 +11,6 @@ export class GameInfoComponent {
   @Input() image: string = '';
 
   returnPrice() {
-    return (this.price);
+    return (parseFloat(this.price).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}));
   }
 }

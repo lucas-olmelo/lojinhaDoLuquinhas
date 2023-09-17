@@ -6,6 +6,6 @@
 .productsLine {
     display: flex;
     flex-direction: row;
-    gap: 3%;
+    gap: 1%;
     margin: 1% auto;
 }
