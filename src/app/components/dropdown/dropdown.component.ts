@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
 export class DropdownComponent {
 
   select1: any = {};
-  pais: any=[]; 
-
+  
   gameName: string = '';
   gamePrice: number = 0;
   gameId: number = 99;
+
   coverUrl: string = '../../../assets/images/covers/game_cover_';
   coverExtensao: string = '.jpg';
 
