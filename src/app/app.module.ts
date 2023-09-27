@@ -12,6 +12,9 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { GameInfoComponent } from './components/game-info/game-info.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ListaDesejosComponent } from './components/lista-desejos/lista-desejos.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { MatMenuModule } from "@angular/material/menu";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,15 @@ import { ListaDesejosComponent } from './components/lista-desejos/lista-desejos.
     DropdownComponent,
     GameInfoComponent,
     CartComponent,
-    ListaDesejosComponent
+    ListaDesejosComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
