@@ -15,6 +15,3 @@
     <button class="buttonCart" *ngIf="this.gamePrice > 0" (click)="clickButton()">Adicionar ao Carrinho</button>
 
 </div>
-<div *ngIf="cart.length != 0" class="cartContainer">
-    <app-cart [cartList]="cart"></app-cart>
-</div>

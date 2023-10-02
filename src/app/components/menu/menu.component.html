@@ -3,10 +3,16 @@
 <i mat-button [matMenuTriggerFor]="menu" class="bi bi-list" style="font-size: 40px; color: white;"></i>
 
 <mat-menu #menu="matMenu" [overlapTrigger]="false">
+    <button mat-menu-item routerLink="/" routerLinkActive="active">
+        <i class="bi bi-house" style="font-size: 30px; color: black;"></i>Início
+    </button>
     <button mat-menu-item routerLink="/carrinho" routerLinkActive="active">
         <i class="bi bi-cart3" style="font-size: 30px; color: black;"></i>Carrinho
     </button>
     <button mat-menu-item routerLink="/favoritos" routerLinkActive="active">
         <i class="bi bi-heart" style="font-size: 30px; color: black;"></i>Lista de Desejos
+    </button>
+    <button mat-menu-item routerLink="/faleconosco" routerLinkActive="active">
+        <i class="bi bi-chat" style="font-size: 30px; color: black;"></i>Fale conosco
     </button>
 </mat-menu>

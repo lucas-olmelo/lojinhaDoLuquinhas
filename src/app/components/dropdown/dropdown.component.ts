@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartService } from "../../services/cart.service";
 
 @Component({
   selector: 'app-dropdown',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./dropdown.component.css']
 })
 export class DropdownComponent {
+
+  constructor(private cartService: CartService){ }
 
   select1: any = {};
   
@@ -55,7 +58,6 @@ export class DropdownComponent {
       preco: 240
     },
   ];
-  constructor(){}
 
   ngOnInit() {
     this.select1 = 99;
@@ -73,9 +75,10 @@ export class DropdownComponent {
     console.log(this.gamePrice);
     
   }
-
+  
   clickButton(){
     alert(this.gameName + ' adicionado ao carrinho')
+    this.cartService.adicionaLista(this.gameCovers.filter((x)=> x.id == this.select1)[0]);
     this.cart.push(this.gameCovers.filter((x)=> x.id == this.select1)[0]);
   }
 }

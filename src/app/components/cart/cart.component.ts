@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CartService } from "../../services/cart.service";
 
 @Component({
   selector: 'app-cart',
@@ -6,11 +7,15 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent {
-  @Input() cartList: any[] = [];
+
+  constructor(private cartService: CartService){
+    this.cartList = cartService.retornaLista();
+  }
+  cartList: any[] = [];
+
   coverUrl: string = '../../../assets/images/covers/game_cover_';
   coverExtensao: string = '.jpg';
 
-  
   adicionaValores(){
     let custo = 0;
 

@@ -15,6 +15,8 @@ import { ListaDesejosComponent } from './components/lista-desejos/lista-desejos.
 import { MenuComponent } from './components/menu/menu.component';
 import { MatMenuModule } from "@angular/material/menu";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { FaleConoscoComponent } from './pages/fale-conosco/fale-conosco.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     GameInfoComponent,
     CartComponent,
     ListaDesejosComponent,
-    MenuComponent
+    MenuComponent,
+    CartPageComponent,
+    FaleConoscoComponent
   ],
   imports: [
     BrowserModule,

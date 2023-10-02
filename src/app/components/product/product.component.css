@@ -15,10 +15,27 @@
     margin: 5% auto 15%;
 }
 
+.priceAdd {
+    display: flex;
+    flex-direction: row;
+}
+
 .productPrice {
     color: rgb(0, 0, 185);
     font-size: 22px;
     font-weight: bold;
     position: absolute;
     bottom: 15px;
+    left: 20px;
+}
+
+.bi.bi-heart, .bi.bi-heart-fill {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.bi.bi-heart:hover, .bi.bi-heart-fill:hover {
+    transform: scale(1.1);
 }
