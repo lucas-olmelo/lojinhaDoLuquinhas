@@ -1,7 +1,7 @@
 <div class="gameInfo">
-    <img class="gameImage" src="{{image}}" alt="">
+    <img class="gameImage" src="{{game.img}}" alt="">
     <div class="infoText">
-        <p class="gameName">{{name}}</p>
-        <p *ngIf="name != ''" class="gamePrice">{{returnPrice()}}</p>
+        <p class="gameName">{{game.nome}}</p>
+        <p *ngIf="game.nome != ''" class="gamePrice">{{returnPrice()}}</p>
     </div>
 </div>

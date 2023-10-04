@@ -6,11 +6,13 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./game-info.component.css']
 })
 export class GameInfoComponent {
-  @Input() name: string = '';
-  @Input() price: string = '';
-  @Input() image: string = '';
-
+  @Input() game: {id: number, nome: string, preco: number, img: string} = {
+    id: 0,
+    nome: '',
+    preco: 0,
+    img: ''
+  }
   returnPrice() {
-    return (parseFloat(this.price).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}));
+    return ((this.game.preco).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}));
   }
 }

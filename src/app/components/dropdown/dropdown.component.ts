@@ -19,8 +19,6 @@ export class DropdownComponent {
   coverUrl: string = '../../../assets/images/covers/game_cover_';
   coverExtensao: string = '.jpg';
 
-  cart: any = [];
-  
   gameCovers = [
     {
       id: 99,
@@ -59,6 +57,8 @@ export class DropdownComponent {
     },
   ];
 
+  game: any;
+
   ngOnInit() {
     this.select1 = 99;
   }
@@ -79,6 +79,6 @@ export class DropdownComponent {
   clickButton(){
     alert(this.gameName + ' adicionado ao carrinho')
     this.cartService.adicionaLista(this.gameCovers.filter((x)=> x.id == this.select1)[0]);
-    this.cart.push(this.gameCovers.filter((x)=> x.id == this.select1)[0]);
+    this.game = this.gameCovers.filter((x)=> x.id == this.select1)[0];
   }
 }

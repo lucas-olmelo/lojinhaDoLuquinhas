@@ -36,6 +36,10 @@
     cursor: pointer;
 }
 
+.noDisplay {
+    display: none;
+}
+
 .bi.bi-heart:hover, .bi.bi-heart-fill:hover {
     transform: scale(1.1);
 }

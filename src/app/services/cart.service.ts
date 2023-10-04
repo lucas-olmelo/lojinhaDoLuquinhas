@@ -16,4 +16,19 @@ export class CartService {
   retornaLista() {
     return this.cartList;
   }
+
+  wishList: {id: number; nome: string; preco: number; img: string}[] = [];
+
+  adicionaListaDesejo(item: {id: number; nome: string; preco: number; img: string}) {
+    this.wishList.push(item);
+  }
+
+  removeListaDesejo(item: {id: number; nome: string; preco: number; img: string}) {
+    let index = this.wishList.indexOf(item);
+    this.wishList.splice(index, 1);
+  }
+
+  retornaListaDesejo() {
+    return this.wishList;
+  }
 }

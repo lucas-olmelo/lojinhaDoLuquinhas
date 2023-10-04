@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FaleConoscoComponent } from './pages/fale-conosco/fale-conosco.component';
+import { FavoritosComponent } from './pages/favoritos/favoritos.component';
 
 const routes: Routes = [
   {
@@ -15,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: 'favoritos',
-    component: CartPageComponent
+    component: FavoritosComponent
   },
   {
     path: 'faleconosco',

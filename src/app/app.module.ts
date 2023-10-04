@@ -17,6 +17,8 @@ import { MatMenuModule } from "@angular/material/menu";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { FaleConoscoComponent } from './pages/fale-conosco/fale-conosco.component';
+import { WishListComponent } from './components/wish-list/wish-list.component';
+import { FavoritosComponent } from './pages/favoritos/favoritos.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { FaleConoscoComponent } from './pages/fale-conosco/fale-conosco.componen
     ListaDesejosComponent,
     MenuComponent,
     CartPageComponent,
-    FaleConoscoComponent
+    FaleConoscoComponent,
+    WishListComponent,
+    FavoritosComponent
   ],
   imports: [
     BrowserModule,
