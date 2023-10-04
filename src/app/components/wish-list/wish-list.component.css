@@ -15,8 +15,23 @@
     display: flex;
 }
 
+.gameItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .game {
     margin-bottom: 2%;
+    width: 100%;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .buttonCart {
@@ -25,10 +40,23 @@
     border-radius: 8px;
     font-size: 18px;
     padding: .8% 5%;
-    margin: 1% auto;
+    margin: 1% 0 1%;
+    height: 40px;
+    width: 400px;
 }
 
-.buttonCart:hover {
+.buttonRemove {
+    background-color: rgb(95, 95, 95);
+    color: white;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: .8% 5%;
+    margin: 1% 0 1%;
+    height: 20px;
+    width: 200px;
+}
+
+.buttonCart:hover, .buttonRemove:hover {
     cursor: pointer;
     transform: scale(1.1);
 }

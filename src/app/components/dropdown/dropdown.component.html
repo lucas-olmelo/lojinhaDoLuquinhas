@@ -6,10 +6,10 @@
         </option>
     </select>
     
-    <app-game-info *ngIf="gamePrice != 0" class="gameInfo" 
+    <app-game-info *ngIf="game.preco != 0" class="gameInfo" 
         [game]="game">
     </app-game-info>
     
-    <button class="buttonCart" *ngIf="this.gamePrice > 0" (click)="clickButton()">Adicionar ao Carrinho</button>
+    <button class="buttonCart" *ngIf="this.game.preco > 0" (click)="clickButton()">Adicionar ao Carrinho</button>
 
 </div>

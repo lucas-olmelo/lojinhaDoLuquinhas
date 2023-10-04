@@ -9,6 +9,12 @@ export class ProductComponent {
 
   constructor(private cartService: CartService) {}
 
+  ngOnInit() {
+    this.checkItem(this.game);
+  }
+
+  wishList: {id: number, nome: string, preco: number, img: string}[] = [];
+
   @Input() game: {id: number, nome: string, preco: number, img: string} = {
     id: 0,
     nome: '',
@@ -25,21 +31,33 @@ export class ProductComponent {
     let heartFill = document.querySelector(`.btnHeartFill${id}`);
 
     if (heartFill?.classList.contains('noDisplay')) {
-      heart?.classList.add('noDisplay');
-      heartFill?.classList.remove('noDisplay');
-
       if (this.cartService.retornaLista().includes(this.game)) {
-        console.log(this.cartService.retornaLista().includes(this.game));
+        return;
       } else {
-        console.log(this.cartService.retornaLista().includes(this.game));;
+        heart?.classList.add('noDisplay');
+        heartFill?.classList.remove('noDisplay');
         this.cartService.adicionaListaDesejo(this.game);
-        console.log(this.cartService.retornaListaDesejo());
       }
     } else {
       heartFill?.classList.add('noDisplay');
       heart?.classList.remove('noDisplay');
       this.cartService.removeListaDesejo(this.game);
-      console.log(this.cartService.retornaListaDesejo());
     }
+  }
+
+  checkItem(game: {id: number, nome: string, preco: number, img: string}) {
+    
+    this.cartService.retornaListaDesejo().forEach(item => {
+      if (item.id === game.id) {
+        let heart = document.querySelector(`.btnHeart${game.id}`);
+        let heartFill = document.querySelector(`.btnHeartFill${game.id}`);
+
+        console.log(heart);
+        console.log(heartFill);
+
+        heart?.classList.add('noDisplay');
+        heartFill?.classList.remove('noDisplay');
+      }
+    });
   }
 }

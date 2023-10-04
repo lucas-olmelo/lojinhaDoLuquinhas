@@ -1,7 +1,13 @@
 <div class="cartContainer">
     <h2 class="title">Lista de Desejos</h2>
     <div class="cartItems">
-        <app-game-info class="game" *ngFor="let item of wishList" [game]="item"></app-game-info>
-        <button *ngFor="let item of wishList" class="buttonCart">Adicionar ao Carrinho</button>
+        <p *ngIf="wishList.length === 0">Você não possui nenhum item na sua lista</p>
+        <div class="gameItem" *ngFor="let item of wishList">
+            <app-game-info class="game" [game]="item"></app-game-info>
+            <div class="buttonsContainer">
+                <button class="buttonCart" (click)="clickButton(item.id)">Adicionar ao Carrinho</button>
+                <button class="buttonRemove" (click)="removeItem(item.id)">Remover</button>
+            </div>
+        </div>
     </div>
 </div>

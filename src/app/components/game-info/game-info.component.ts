@@ -12,6 +12,11 @@ export class GameInfoComponent {
     preco: 0,
     img: ''
   }
+
+  ngOnInit() {
+    console.log(this.game);
+  }
+
   returnPrice() {
     return ((this.game.preco).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}));
   }
