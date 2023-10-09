@@ -48,7 +48,7 @@
 .buttonRemove {
     background-color: rgb(95, 95, 95);
     color: white;
-    border-radius: 8px;
+    border-radius: 5px;
     font-size: 12px;
     padding: .8% 5%;
     margin: 1% 0 1%;
@@ -56,7 +56,12 @@
     width: 200px;
 }
 
-.buttonCart:hover, .buttonRemove:hover {
+.buttonCart:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+
+.buttonRemove:hover {
+    cursor: pointer;
+
 }
