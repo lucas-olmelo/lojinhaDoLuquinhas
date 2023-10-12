@@ -13,8 +13,17 @@ export class CartService {
     this.cartList.push(item);
   }
 
+  removeLista(item: {id: number; nome: string; preco: number;}) {
+    let index = this.cartList.indexOf(item);
+    this.cartList.splice(index, 1);
+  }
+
   retornaLista() {
     return this.cartList;
+  }
+
+  limpaCarrinho(){
+    this.cartList.splice(0);
   }
 
   wishList: {id: number; nome: string; preco: number; img: string}[] = [];

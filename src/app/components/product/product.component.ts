@@ -10,7 +10,6 @@ export class ProductComponent {
   constructor(private cartService: CartService) {}
 
   ngOnInit() {
-    this.checkItem(this.game);
   }
 
   wishList: {id: number, nome: string, preco: number, img: string}[] = [];
@@ -43,21 +42,5 @@ export class ProductComponent {
       heart?.classList.remove('noDisplay');
       this.cartService.removeListaDesejo(this.game);
     }
-  }
-
-  checkItem(game: {id: number, nome: string, preco: number, img: string}) {
-    
-    this.cartService.retornaListaDesejo().forEach(item => {
-      if (item.id === game.id) {
-        let heart = document.querySelector(`.btnHeart${game.id}`);
-        let heartFill = document.querySelector(`.btnHeartFill${game.id}`);
-
-        console.log(heart);
-        console.log(heartFill);
-
-        heart?.classList.add('noDisplay');
-        heartFill?.classList.remove('noDisplay');
-      }
-    });
   }
 }

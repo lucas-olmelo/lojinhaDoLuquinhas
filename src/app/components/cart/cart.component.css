@@ -38,7 +38,29 @@
     margin: 1% 2%;
 }
 
-.buttonBuy:hover {
+.buttonBuy:hover, .buttonClear:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+
+.buttonRemove {
+    background-color: rgb(95, 95, 95);
+    color: white;
+    border-radius: 5px;
+    padding: .5% 5%;
+    margin-bottom: 3%;
+}
+
+.buttonRemove:hover {
+    cursor: pointer;
+}
+
+.buttonClear {
+    background-color: white;
+    border: 2px rgb(0, 0, 185) solid;
+    color: rgb(0, 0, 185);
+    border-radius: 8px;
+    font-size: 18px;
+    padding: .8% 5%;
+    margin: 1% 2%;
 }

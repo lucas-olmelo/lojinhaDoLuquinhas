@@ -62,11 +62,11 @@ export class DropdownComponent {
     },
   ];
 
-  game: { id: number; nome: string; preco: number; img: string;} = {
+  game: { id: number; nome: string; preco: number; img: string; } = {
     id: 0,
     nome: '',
     preco: 0,
-    img: ''
+    img: '',
   };
 
   ngOnInit() {
@@ -78,8 +78,9 @@ export class DropdownComponent {
   }
   
   clickButton(){
+    const addGame = this.gameCovers.filter((x)=> x.id == this.select1)[0];
     this.mostraDialogo(this.game.nome);
-    this.cartService.adicionaLista(this.gameCovers.filter((x)=> x.id == this.select1)[0]);
+    this.cartService.adicionaLista(addGame);
     this.game = {id: 0, nome: '', preco: 0, img: ''};
     this.select1 = 99;
   }

@@ -25,4 +25,15 @@ export class CartComponent {
 
     return custo.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
   }
+
+  removeItem(id: number) {
+    let game = this.cartService.retornaLista().filter((game)=> game.id == id)[0]
+    this.cartService.removeLista(game);
+    this.cartList = this.cartService.retornaLista();
+  }
+
+  clearCart(){
+    this.cartService.limpaCarrinho();
+    this.cartList = this.cartService.retornaLista();
+  }
 }

@@ -1,12 +1,19 @@
 <div class="cartContainer">
     <h2 class="title">Carrinho</h2>
-    <div class="cartItems">
-        <app-game-info class="game" *ngFor="let item of cartList" [game]="item"></app-game-info>
-    </div>
-    <div class="buyingContainer">
-        <p class="valueText">Valor total: 
-            <strong style="color: rgb(0, 0, 185); font-size: 25px;">{{adicionaValores()}}</strong>
-        </p>
-        <button class="buttonBuy">Comprar</button>
+    <p *ngIf="this.cartList.length === 0">Seu carrinho está vazio! Navegue por nossa loja para adicionar itens aqui!</p>
+    <div *ngIf="this.cartList.length > 0" class="cart">
+        <div class="cartItems">
+            <div *ngFor="let item of cartList" class="cartItem">
+                <app-game-info class="game" [game]="item"></app-game-info>
+                <button class="buttonRemove" (click)="removeItem(item.id)">Remover</button>
+            </div>
+        </div>
+        <div class="buyingContainer">
+            <p class="valueText">Valor total:
+                <strong style="color: rgb(0, 0, 185); font-size: 25px;">{{adicionaValores()}}</strong>
+            </p>
+            <button class="buttonBuy">Comprar</button>
+            <button class="buttonClear" (click)="clearCart()">Limpar Carrinho</button>
+        </div>
     </div>
 </div>
