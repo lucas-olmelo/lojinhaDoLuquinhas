@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<div class="registerContainer">
+    <form class="formulario-login">
+        <h1 class="titulo-login">Cadastre-se na<br>
+            <strong routerLink="/" routerLinkActive="true" class="title">Lojinha do Luquinhas!</strong>
+        </h1>
+    
+        <div class="wrap-input100">
+            <span class="label-input100">Nome completo</span>
+            <input required class="input100" type="text" [(ngModel)]="itemName" name="name" placeholder="Nome...">
+            <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100">
+            <span class="label-input100">Email</span>
+            <input class="input100" type="text" [(ngModel)]="itemEmail" name="email" placeholder="Endereço de e-mail...">
+            <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100">
+            <span class="label-input100">CPF</span>
+            <input class="input100" type="text" [(ngModel)]="itemCpf" name="cpf" placeholder="CPF...">
+            <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100">
+            <span class="label-input100">Senha</span>
+            <input class="input100" type="password" [(ngModel)]="itemPassword" name="password" placeholder="*************">
+            <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100">
+            <span class="label-input100"> Telefone</span>
+            <input class="input100" type="tel" [(ngModel)]="itemTel" name="tel" placeholder="(XX)XXXXX-XXXX">
+            <span class="focus-input100"></span>
+        </div>
+
+        <!-- <app-form-input [inputTitle]="'Nome completo'" [placeHolder]="'Nome...'" [type]="'text'" [model]="'nomeModel'"></app-form-input>
+        <app-form-input [inputTitle]="'Email'" [placeHolder]="'Endereço de e-mail...'" [type]="'text'" [model]="'nomeModel'"></app-form-input>
+        <app-form-input [inputTitle]="'CPF'" [placeHolder]="'CPF...'" [type]="'text'" [model]="'nomeModel'"></app-form-input>
+        <app-form-input [inputTitle]="'Senha'" [placeHolder]="'*************'" [type]="'password'" [model]="'nomeModel'"></app-form-input>
+        <app-form-input [inputTitle]="'Telefone'" [placeHolder]="'(XX)XXXXX-XXXX'" [type]="'tel'" [model]="'nomeModel'"></app-form-input> -->
+
+        <div class="formEnd">
+            <div class="termos">
+                <div class="termos-checkbox">
+                    <input required class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                    <label class="label-checkbox100" for="ckb1">
+                        <span class="txt1">
+                            Eu concordo com os
+                            <a href="#" class="txt2 hov1">
+                                Termos de Uso
+                            </a>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="container-botao-login">
+                <button (click)="profilePost()" class="botao-login">Cadastrar</button>
+            </div>
+        </div>
+    </form>
+
+
+    <button (click)="callBack()">Teste do Back</button>
+
+    <ul *ngFor="let result of values">
+        <li>{{result.id}} - {{result.first_name}} {{result.last_name}}</li>
+    </ul>
+</div>

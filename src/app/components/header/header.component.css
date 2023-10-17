@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: rgb(0, 0, 185);
-    padding: 2%;
+    padding: 1%;
 }
 
 .headerLogo {
@@ -18,7 +18,7 @@
 }
 
 .logo {
-    width: 100px;
+    width: 75px;
     border-radius: 50%;
 }
 
@@ -30,9 +30,11 @@ h1 {
     font-family: 'Black Ops One', cursive;
     color: white;
     font-size: 45px;
+    margin: 0;
 }
 
 p {
     color: white;
     font-size: 25px;
+    margin-bottom: 0;
 }

@@ -1,0 +1,29 @@
+.wrap-input100 {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin: 4% auto;
+}
+
+.label-input100 {
+    color: rgb(0,0,185);
+    font-size: 20px;
+}
+
+.input100 {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+    width: 100%;
+    background: #e6e6e6;
+    height: 50px;
+    border: 2px solid rgb(0,0,185);
+    border-radius: 25px;
+    margin-top: 2%;
+    padding-left: 5%;
+}
+
+.input100:focus {
+    border: 2px solid rgb(0,0,185);
+    color: rgb(0,0,185);
+}
