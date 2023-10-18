@@ -3,6 +3,8 @@ import { profilePost, valores } from './Model/profile';
 import { ServerService } from 'src/app/services/server.service';
 import * as $ from 'jquery';
 
+import { FormInputComponent } from 'src/app/components/form-input/form-input.component';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -22,21 +24,13 @@ export class RegisterComponent {
   itemPassword: string = "";
   itemTel: string = "";
 
-  callBack() {
-    this.server.getUsers().subscribe(
-      (resposta: any) => {
-        console.log(resposta.data);
-        this.values = resposta.data
-      }
-    )
-  }
-
   profilePost() {
     this.client = {name: this.itemName, email: this.itemEmail, cpf: this.itemCpf, password: this.itemPassword, tel: this.itemTel};
     this.server.postUser(this.client).subscribe(
       (resposta: any) => {
         this.clientResult = (resposta)
         this.mostraDialogo(resposta);
+        console.log(this.server.getUser(resposta.id));
       }
     )
     this.limpaForm();

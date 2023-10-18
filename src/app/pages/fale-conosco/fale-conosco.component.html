@@ -2,26 +2,14 @@
 
 <div class="faleContainer">
     <app-lista-desejos></app-lista-desejos>
-    <div class="tituloContato">
-        <p>Deseja entrar em contato conosco? Preencha o formulário abaixo: 
-    </div>
-    <!--Formulário-->
-    <form name="formContato" method="get" action="mailto:lucaas1904@gmail.com" target="_blank">
-        <fieldset>
-            <label for="nomesobrenome"><span style="color: red;">*</span> Nome e Sobrenome</label>
-            <input type="text" id="nomeSn" name="" class="input-padrao" placeholder="Nome" required>
-
-            <label for="email"><span style="color: red;">*</span> E-mail</label>
-            <input type="email" id="email" name="" class="input-padrao" required placeholder="seuemail@email.com">
-
-            <label for="telefone">Telefone</label>
-            <input type="tel" id="telefone" name="" class="input-padrao" placeholder="(XX) XXXXX-XXXX">
-
-            <label for="mensagem">Mensagem</label>
-            <textarea name="" id="mensagem" class="input-padrao" cols="70" rows="4" placeholder="Escreva sua mensagem aqui..."></textarea>
-        </fieldset>
-        <div>
-            <input type="submit" value="Enviar formulário" class="enviar" (click)="mostraDialogo()">
+    <div class="commentsContainer">
+        <h2 class="title">Avaliações dos nossos clientes:</h2>
+        <div class="comment" *ngFor="let user of usersList">
+            <app-comment 
+                [username]="user.first_name + ' ' + user.last_name"
+                [userEmail]="user.email"
+                [userImage]="user.avatar">
+            </app-comment>
         </div>
-    </form>
+    </div>
 </div>

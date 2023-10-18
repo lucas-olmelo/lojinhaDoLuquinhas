@@ -1,0 +1,15 @@
+<div class="commentContainer">
+    <img class="avatarPic" src="{{userImage}}" alt="Avatar">
+    <div class="userRating">
+        <div class="userInfo">
+            <p class="username">{{username}}</p>
+            <p style="margin: 0 3%; font-size: 28px;"> - </p>
+            <p class="userEmail">{{userEmail}}</p>
+        </div>
+        <div class="rating">
+            <div *ngFor="let i of randomNumber" class="star">
+                <i class="bi bi-star-fill" style="font-size: 25px; color: gold;"></i>
+            </div>
+        </div>
+    </div>
+</div>

@@ -18,4 +18,8 @@ export class ServerService {
   public getUsers(): Observable<any> {
     return this.httpClient.get(this.url);
   }
+
+  public getUser(id: number): Observable<any> {
+    return this.httpClient.get(this.url + '/' + id);
+  }
 }

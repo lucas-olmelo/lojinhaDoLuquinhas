@@ -1,0 +1,39 @@
+.commentContainer {
+    border: solid 2px rgb(0,0,185);
+    border-radius: 20px;
+    padding: .5% 3%;
+    margin: 1% auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.avatarPic {
+    width: 75px;
+    border-radius: 50%;
+    margin-right: 1%;
+}
+
+.userInfo {
+    display: flex;
+    align-items: baseline;
+}
+
+.username {
+    font-size: 28px;
+    min-width: max-content;
+    margin: 0;
+}
+
+.userEmail {
+    font-size: 20px;
+    margin: 0;
+    color: rgb(147, 147, 147);
+    font-style: italic;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+}

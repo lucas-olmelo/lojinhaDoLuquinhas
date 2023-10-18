@@ -21,7 +21,8 @@ import { FaleConoscoComponent } from './pages/fale-conosco/fale-conosco.componen
 import { WishListComponent } from './components/wish-list/wish-list.component';
 import { FavoritosComponent } from './pages/favoritos/favoritos.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { FormInputComponent } from './components/form-input/form-input.component'
+import { FormInputComponent } from './components/form-input/form-input.component';
+import { CommentComponent } from './components/comment/comment.component'
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { FormInputComponent } from './components/form-input/form-input.component
     FavoritosComponent,
     RegisterComponent,
     FormInputComponent,
+    CommentComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import * as $ from 'jquery';
+import { ServerService } from 'src/app/services/server.service';
 
 @Component({
   selector: 'app-fale-conosco',
@@ -7,6 +8,23 @@ import * as $ from 'jquery';
   styleUrls: ['./fale-conosco.component.css']
 })
 export class FaleConoscoComponent {
+
+  constructor(private server: ServerService) {}
+
+  ngOnInit() {
+    this.getUsers();
+  }
+
+  usersList: any[] = []
+
+  getUsers() {
+    this.server.getUsers().subscribe(
+      (resposta: any) => {
+        console.log(resposta.data);
+        this.usersList = resposta.data
+      }
+    )
+  }
 
   mostraDialogo() {
 
