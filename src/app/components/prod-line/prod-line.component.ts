@@ -15,38 +15,50 @@ export class ProdLineComponent {
     {
       id:0,
       nome:'Gan Ie',
-      preco: 439.99,
+      preco: 319.99,
       img: this.cover + 0 + this.extensao
     },
     {
       id:1,
       nome:'Eadniv Be Ciowie Eanf Rnanc',
-      preco: 199.99,
+      preco: 179.99,
       img: this.cover + 1 + this.extensao
     },
     {
       id:2,
       nome:'Gamee: Siamese',
-      preco: 99.99,
+      preco: 119.99,
       img: this.cover + 2 + this.extensao
     },
     {
       id:3,
       nome:'Faserck Faben Gamt Iae',
-      preco: 299.99,
+      preco: 250,
       img: this.cover + 3 + this.extensao
     },
     {
       id:4,
       nome:'Gamni EE',
-      preco: 299.99,
+      preco: 269.99,
       img: this.cover + 4 + this.extensao
     },
     {
       id:5,
       nome:'A7C4M Gan Oi Isiutlienm Gam IE',
-      preco: 240,
+      preco: 199.99,
       img: this.cover + 5 + this.extensao
+    },
+    {
+      id:6,
+      nome:'Pirate',
+      preco: 399.99,
+      img: this.cover + 6 + this.extensao
+    },
+    {
+      id:7,
+      nome:'Sports Pange 2023',
+      preco: 369.99,
+      img: this.cover + 7 + this.extensao
     },
   ];
 

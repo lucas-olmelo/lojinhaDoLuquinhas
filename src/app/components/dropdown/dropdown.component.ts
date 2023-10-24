@@ -27,39 +27,39 @@ export class DropdownComponent {
     {
       id:0,
       nome:'Gan Ie',
-      preco: 439.99,
+      preco: 319.99,
       img: this.coverUrl + 0 + this.coverExtensao
     },
     {
       id:1,
       nome:'Eadniv Be Ciowie Eanf Rnanc',
-      preco: 199.99,
+      preco: 179.99,
       img: this.coverUrl + 1 + this.coverExtensao
     },
     {
       id:2,
       nome:'Gamee: Siamese',
-      preco: 99.99,
+      preco: 119.99,
       img: this.coverUrl + 2 + this.coverExtensao
     },
     {
       id:3,
       nome:'Faserck Faben Gamt Iae',
-      preco: 299.99,
+      preco: 250,
       img: this.coverUrl + 3 + this.coverExtensao
     },
     {
       id:4,
       nome:'Gamni EE',
-      preco: 299.99,
+      preco: 269.99,
       img: this.coverUrl + 4 + this.coverExtensao
     },
     {
       id:5,
       nome:'A7C4M Gan Oi Isiutlienm Gam IE',
-      preco: 240,
+      preco: 199.99,
       img: this.coverUrl + 5 + this.coverExtensao
-    },
+    }
   ];
 
   game: { id: number; nome: string; preco: number; img: string; } = {
